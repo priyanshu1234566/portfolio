@@ -182,43 +182,56 @@ export default function Home() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative flex justify-center">
+<div className="relative flex justify-center items-center w-full min-h-[600px]">
 
-          {/* Animated Circle */}
-          <div className="absolute w-[420px] h-[420px] rounded-full border border-cyan-500/20 animate-spin-slow"></div>
+  {/* Outer Animated Ring */}
+  <div className="absolute w-[340px] md:w-[460px] h-[340px] md:h-[460px] rounded-full border border-cyan-500/20 animate-spin-slow"></div>
 
-          <div className="absolute w-[500px] h-[500px] rounded-full border border-blue-500/10 animate-pulse"></div>
+  {/* Pulse Ring */}
+  <div className="absolute w-[380px] md:w-[520px] h-[380px] md:h-[520px] rounded-full border border-blue-500/10 animate-pulse"></div>
 
-          {/* Glow */}
-          <div className="absolute w-[350px] h-[350px] bg-cyan-500/20 blur-[100px] rounded-full"></div>
+  {/* Glow */}
+  <div className="absolute w-[250px] md:w-[350px] h-[250px] md:h-[350px] bg-cyan-500/20 blur-[100px] rounded-full"></div>
 
-          {/* Image */}
-          <div className="relative group">
+  {/* Image Wrapper */}
+  <div className="relative z-10">
 
-            <img
-              src={profile}
-              alt="profile"
-              draggable="false"
-              className="relative z-10 w-[300px] md:w-[420px] rounded-[40px] border border-white/10 shadow-2xl shadow-cyan-500/20 object-cover hover:scale-105 transition duration-500"
-            />
+    <img
+      src={profile}
+      alt="profile"
+      draggable="false"
+      className="w-[280px] md:w-[420px] h-[280px] md:h-[420px] object-cover rounded-[35px] border border-white/10 shadow-2xl shadow-cyan-500/20 hover:scale-105 transition duration-500"
+    />
 
-            {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-xl">
+    {/* Floating Experience Card */}
+    <div className="absolute -bottom-5 -left-5 md:-left-10 bg-white/10 border border-white/10 backdrop-blur-xl px-5 py-4 rounded-2xl shadow-2xl z-20 animate-bounce">
 
-              <h3 className="text-3xl font-black text-cyan-400">
-                2+
-              </h3>
+      <h3 className="text-2xl md:text-3xl font-black text-cyan-400">
+        2+
+      </h3>
 
-              <p className="text-gray-300 text-sm mt-1">
-                Years Experience
-              </p>
+      <p className="text-sm text-gray-300 mt-1 whitespace-nowrap">
+        Years Experience
+      </p>
 
-            </div>
+    </div>
 
-          </div>
+    {/* Floating Project Card */}
+    <div className="absolute -top-5 -right-5 md:-right-10 bg-[#0f172a]/90 border border-cyan-500/20 backdrop-blur-xl px-5 py-4 rounded-2xl shadow-2xl z-20">
 
-        </div>
+      <h3 className="text-2xl md:text-3xl font-black text-purple-400">
+        15+
+      </h3>
 
+      <p className="text-sm text-gray-300 mt-1 whitespace-nowrap">
+        Projects Done
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
       </div>
 
     </section>
