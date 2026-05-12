@@ -19,7 +19,10 @@ export default function Navbar() {
 
       {/* Hamburger Icon */}
       <div
-        className="md:hidden text-5xl cursor-pointer text-[#18023f]"
+        id="menu"
+        className={`md:hidden text-5xl cursor-pointer text-[#18023f] transition duration-300 ${
+          menuOpen ? "rotate-180" : ""
+        }`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? <FaTimes /> : <FaBars />}
@@ -27,71 +30,71 @@ export default function Navbar() {
 
       {/* Navbar */}
       <nav
-        className={`fixed md:static top-[6.5rem] ${
+        className={`navbar fixed md:static top-[6.5rem] ${
           menuOpen ? "right-0" : "-right-full"
-        } md:right-0 w-[75%] md:w-auto h-screen md:h-auto bg-[#0e0f31] md:bg-transparent transition-all duration-500`}
+        } md:right-0 w-[75%] md:w-auto h-screen md:h-auto bg-[#0e0f31] md:bg-transparent text-left md:text-center items-start md:items-center transition-all duration-500`}
       >
 
         <ul className="flex flex-col md:flex-row justify-center items-start md:items-center p-5 md:p-0">
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#home"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               Home
             </a>
           </li>
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#about"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               About
             </a>
           </li>
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#skills"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               Skills
             </a>
           </li>
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#education"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               Education
             </a>
           </li>
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#work"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               Work
             </a>
           </li>
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#experience"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               Experience
             </a>
           </li>
 
-          <li className="w-full md:w-auto md:ml-10 my-4 md:my-0">
+          <li className="text-center w-full md:w-auto my-4 md:my-0 md:ml-10 rounded-lg">
             <a
               href="#contact"
-              className="block text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] border-b-4 border-transparent hover:border-[#011aff] pb-2"
+              className="block p-4 md:p-0 text-left md:text-center text-white md:text-[#0e2431] text-3xl md:text-[1.57rem] font-semibold tracking-wide hover:text-[#011aff] hover:border-b-4 hover:border-[#011aff]"
             >
               Contact
             </a>
