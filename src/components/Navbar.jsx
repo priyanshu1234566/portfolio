@@ -158,7 +158,7 @@ export default function Navbar() {
             </h2>
 
             <p className="text-sm text-cyan-400">
-              WEB Developer
+      
             </p>
 
           </div>
