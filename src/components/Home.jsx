@@ -22,7 +22,7 @@ export default function Home() {
       strings: [
         "Frontend Developer",
         "Backend Developer",
-        "MERN Stack Developer",
+        "WEB Developer",
         "UI/UX Designer",
         "Freelancer",
       ],
@@ -60,7 +60,7 @@ export default function Home() {
               <FaCode className="text-lg shrink-0" />
 
               <span className="text-sm md:text-base font-semibold tracking-wide whitespace-nowrap">
-                Full Stack Developer
+                WEB Developer
               </span>
 
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
 
           {/* Description */}
           <p className="mt-8 text-gray-400 text-lg leading-9 max-w-[650px]">
-            Passionate MERN Stack Developer focused on building
+            Passionate WEB Developer focused on building
             modern, responsive, and high-performance web applications.
             I love creating clean UI designs, smooth user experiences,
             and scalable full-stack solutions.

@@ -9,80 +9,114 @@ import {
 export default function Skills() {
 
   const skills = [
-    {
-      name: "ReactJS",
-      icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
-    },
-    {
-      name: "NodeJS",
-      icon: "https://img.icons8.com/color/48/000000/nodejs.png",
-    },
-    {
-      name: "ExpressJS",
-      icon: "https://img.icons8.com/fluency/48/000000/node-js.png",
-    },
-    {
-      name: "MongoDB",
-      icon: "https://img.icons8.com/color/48/000000/mongodb.png",
-    },
-    {
-      name: "TailwindCSS",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-    },
-    {
-      name: "Bootstrap",
-      icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
-    },
-    {
-      name: "HTML5",
-      icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
-    },
-    {
-      name: "CSS3",
-      icon: "https://img.icons8.com/color/48/000000/css3.png",
-    },
-    {
-      name: "JavaScript",
-      icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
-    },
-    {
-      name: "Python",
-      icon: "https://img.icons8.com/color/48/000000/python--v1.png",
-    },
-    {
-      name: "Java",
-      icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
-    },
-    {
-      name: "C++",
-      icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
-    },
-    {
-      name: "MySQL",
-      icon: "https://img.icons8.com/color/48/000000/mysql-logo.png",
-    },
-    {
-      name: "PostgreSQL",
-      icon: "https://img.icons8.com/color/48/000000/postgreesql.png",
-    },
-    {
-      name: "GitHub",
-      icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
-    },
-    {
-      name: "Git",
-      icon: "https://img.icons8.com/color/48/000000/git.png",
-    },
-    {
-      name: "AWS",
-      icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
-    },
-    {
-      name: "Vercel",
-      icon: "https://img.icons8.com/ios-filled/48/ffffff/vercel.png",
-    },
-  ];
+  {
+    name: "ReactJS",
+    icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+  },
+  {
+    name: "NodeJS",
+    icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+  },
+  {
+    name: "ExpressJS",
+    icon: "https://img.icons8.com/fluency/48/000000/node-js.png",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://img.icons8.com/color/48/000000/mongodb.png",
+  },
+  {
+    name: "TailwindCSS",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  },
+  {
+    name: "Bootstrap",
+    icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+  },
+  {
+    name: "HTML5",
+    icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
+  },
+  {
+    name: "CSS3",
+    icon: "https://img.icons8.com/color/48/000000/css3.png",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
+  },
+  {
+    name: "Python",
+    icon: "https://img.icons8.com/color/48/000000/python--v1.png",
+  },
+  {
+    name: "Java",
+    icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
+  },
+  {
+    name: "C++",
+    icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
+  },
+  {
+    name: "MySQL",
+    icon: "https://img.icons8.com/color/48/000000/mysql-logo.png",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://img.icons8.com/color/48/000000/postgreesql.png",
+  },
+  {
+    name: "GitHub",
+    icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
+  },
+  {
+    name: "Git",
+    icon: "https://img.icons8.com/color/48/000000/git.png",
+  },
+  {
+    name: "AWS",
+    icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
+  },
+  {
+    name: "Vercel",
+    icon: "https://img.icons8.com/ios-filled/48/ffffff/vercel.png",
+  },
 
+  // ================= MS OFFICE =================
+
+  {
+    name: "MS Word",
+    icon: "https://img.icons8.com/color/48/microsoft-word-2019.png",
+  },
+  {
+    name: "MS Excel",
+    icon: "https://img.icons8.com/color/48/microsoft-excel-2019.png",
+  },
+  {
+    name: "MS PowerPoint",
+    icon: "https://img.icons8.com/color/48/microsoft-powerpoint-2019.png",
+  },
+  {
+    name: "MS Access",
+    icon: "https://img.icons8.com/color/48/microsoft-access-2019.png",
+  },
+  {
+    name: "MS Outlook",
+    icon: "https://img.icons8.com/color/48/microsoft-outlook-2019.png",
+  },
+  {
+    name: "MS OneNote",
+    icon: "https://img.icons8.com/color/48/microsoft-onenote-2019.png",
+  },
+  {
+    name: "MS Teams",
+    icon: "https://img.icons8.com/color/48/microsoft-teams-2019.png",
+  },
+  {
+    name: "MS Office",
+    icon: "https://img.icons8.com/color/48/microsoft-office-2019.png",
+  },
+];
   return (
     <section
       id="skills"

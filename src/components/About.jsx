@@ -54,7 +54,7 @@ export default function About() {
 
         <p className="mt-6 text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-9">
 
-          Passionate MERN Stack Developer focused on building
+          Passionate WEB Developer focused on building
           modern, scalable, and high-performance web applications
           with clean UI and smooth user experiences.
 
@@ -119,7 +119,7 @@ export default function About() {
 
             <FaUserGraduate />
 
-            Full Stack Developer
+            WEB Developer
 
           </div>
 
@@ -135,7 +135,7 @@ export default function About() {
             <p>
               I specialize in creating responsive websites,
               modern UI/UX interfaces, and scalable full-stack
-              applications using MERN Stack technologies.
+              applications using WEB technologies.
             </p>
 
             <p>
