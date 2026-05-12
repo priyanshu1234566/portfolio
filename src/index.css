@@ -6,7 +6,9 @@ body{
   box-sizing:border-box;
   font-family: Arial, sans-serif;
 }
- /* Custom styles can be added here */
+
+
+ /* Custom styles can be added here  for home */
  @keyframes spin-slow {
   from {
     transform: rotate(0deg);
