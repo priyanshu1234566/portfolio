@@ -148,19 +148,7 @@ export default function Navbar() {
         } w-[80%] sm:w-[60%] h-screen bg-[#020617]/95 backdrop-blur-2xl border-l border-white/10 transition-all duration-500 shadow-2xl`}
       >
 
-        {/* Top */}
-        <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-
-         
-
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="text-white text-3xl"
-          >
-            <FaTimes />
-          </button>
-
-        </div>
+        
 
         {/* Links */}
         <nav className="flex flex-col gap-4 p-6">
