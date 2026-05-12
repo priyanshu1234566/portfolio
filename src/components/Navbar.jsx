@@ -151,17 +151,7 @@ export default function Navbar() {
         {/* Top */}
         <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
 
-          <div>
-
-            <h2 className="text-2xl font-black text-white">
-              Priyanshu
-            </h2>
-
-            <p className="text-sm text-cyan-400">
-      
-            </p>
-
-          </div>
+         
 
           <button
             onClick={() => setMenuOpen(false)}
