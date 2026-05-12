@@ -2,128 +2,122 @@ import {
   FaLaptopCode,
   FaCode,
   FaDatabase,
-  FaServer,
   FaTools,
 } from "react-icons/fa";
 
 export default function Skills() {
 
   const skills = [
-  {
-    name: "ReactJS",
-    icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
-  },
-  {
-    name: "NodeJS",
-    icon: "https://img.icons8.com/color/48/000000/nodejs.png",
-  },
-  {
-    name: "ExpressJS",
-    icon: "https://img.icons8.com/fluency/48/000000/node-js.png",
-  },
-  {
-    name: "MongoDB",
-    icon: "https://img.icons8.com/color/48/000000/mongodb.png",
-  },
-  {
-    name: "TailwindCSS",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-  },
-  {
-    name: "Bootstrap",
-    icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
-  },
-  {
-    name: "HTML5",
-    icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
-  },
-  {
-    name: "CSS3",
-    icon: "https://img.icons8.com/color/48/000000/css3.png",
-  },
-  {
-    name: "JavaScript",
-    icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
-  },
-  {
-    name: "Python",
-    icon: "https://img.icons8.com/color/48/000000/python--v1.png",
-  },
-  {
-    name: "Java",
-    icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
-  },
-  {
-    name: "C++",
-    icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
-  },
-  {
-    name: "MySQL",
-    icon: "https://img.icons8.com/color/48/000000/mysql-logo.png",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "https://img.icons8.com/color/48/000000/postgreesql.png",
-  },
-  {
-    name: "GitHub",
-    icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
-  },
-  {
-    name: "Git",
-    icon: "https://img.icons8.com/color/48/000000/git.png",
-  },
-  {
-    name: "AWS",
-    icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
-  },
-  {
-    name: "Vercel",
-    icon: "https://img.icons8.com/ios-filled/48/ffffff/vercel.png",
-  },
+    {
+      name: "ReactJS",
+      icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+    },
+    {
+      name: "NodeJS",
+      icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+    },
+    {
+      name: "ExpressJS",
+      icon: "https://img.icons8.com/fluency/48/000000/node-js.png",
+    },
+    {
+      name: "MongoDB",
+      icon: "https://img.icons8.com/color/48/000000/mongodb.png",
+    },
+    {
+      name: "TailwindCSS",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+    },
+    {
+      name: "Bootstrap",
+      icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+    },
+    {
+      name: "HTML5",
+      icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
+    },
+    {
+      name: "CSS3",
+      icon: "https://img.icons8.com/color/48/000000/css3.png",
+    },
+    {
+      name: "JavaScript",
+      icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
+    },
+    {
+      name: "Python",
+      icon: "https://img.icons8.com/color/48/000000/python--v1.png",
+    },
+    {
+      name: "Java",
+      icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
+    },
+    {
+      name: "C++",
+      icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
+    },
+    {
+      name: "MySQL",
+      icon: "https://img.icons8.com/color/48/000000/mysql-logo.png",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "https://img.icons8.com/color/48/postgreesql.png",
+    },
+    {
+      name: "GitHub",
+      icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
+    },
+    {
+      name: "Git",
+      icon: "https://img.icons8.com/color/48/000000/git.png",
+    },
+    {
+      name: "AWS",
+      icon: "https://img.icons8.com/color/48/amazon-web-services.png",
+    },
+    {
+      name: "Vercel",
+      icon: "https://img.icons8.com/ios-filled/48/ffffff/vercel.png",
+    },
 
-  // ================= MS OFFICE =================
+    // ================= MS OFFICE =================
 
-  {
-    name: "MS Word",
-    icon: "https://img.icons8.com/color/48/microsoft-word-2019.png",
-  },
-  {
-    name: "MS Excel",
-    icon: "https://img.icons8.com/color/48/microsoft-excel-2019.png",
-  },
-  {
-    name: "MS PowerPoint",
-    icon: "https://img.icons8.com/color/48/microsoft-powerpoint-2019.png",
-  },
-  {
-    name: "MS Access",
-    icon: "https://img.icons8.com/color/48/microsoft-access-2019.png",
-  },
-  {
-    name: "MS Outlook",
-    icon: "https://img.icons8.com/color/48/microsoft-outlook-2019.png",
-  },
-  {
-    name: "MS OneNote",
-    icon: "https://img.icons8.com/color/48/microsoft-onenote-2019.png",
-  },
-  {
-    name: "MS Teams",
-    icon: "https://img.icons8.com/color/48/microsoft-teams-2019.png",
-  },
-  {
-    name: "MS Office",
-    icon: "https://img.icons8.com/color/48/microsoft-office-2019.png",
-  },
-];
+    {
+      name: "MS Word",
+      icon: "https://img.icons8.com/color/48/microsoft-word-2019.png",
+    },
+    {
+      name: "MS Excel",
+      icon: "https://img.icons8.com/color/48/microsoft-excel-2019.png",
+    },
+    {
+      name: "MS PowerPoint",
+      icon: "https://img.icons8.com/color/48/microsoft-powerpoint-2019.png",
+    },
+    
+    {
+      name: "MS Outlook",
+      icon: "https://img.icons8.com/color/48/microsoft-outlook-2019.png",
+    },
+    {
+      name: "MS OneNote",
+      icon: "https://img.icons8.com/color/48/microsoft-onenote-2019.png",
+    },
+    
+    {
+      name: "MS Office",
+      icon: "https://img.icons8.com/color/48/microsoft-office-2019.png",
+    },
+  ];
+
   return (
     <section
       id="skills"
       className="relative py-28 px-6 md:px-12 lg:px-24 bg-[#020617] text-white overflow-hidden"
     >
 
-      {/* BACKGROUND EFFECTS */}
+      {/* ================= BACKGROUND EFFECTS ================= */}
 
       {/* Glow 1 */}
       <div className="absolute top-[-100px] left-[-100px] w-[320px] h-[320px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
@@ -134,7 +128,7 @@ export default function Skills() {
       {/* Grid */}
       <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]"></div>
 
-      {/* SECTION TITLE */}
+      {/* ================= SECTION TITLE ================= */}
       <div className="relative z-10 text-center mb-20">
 
         {/* Badge */}
@@ -171,7 +165,7 @@ export default function Skills() {
 
       </div>
 
-      {/* SKILLS CONTAINER */}
+      {/* ================= SKILLS GRID ================= */}
       <div className="relative z-10 max-w-[1400px] mx-auto">
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -212,7 +206,7 @@ export default function Skills() {
 
       </div>
 
-      {/* BOTTOM STATS */}
+      {/* ================= BOTTOM STATS ================= */}
       <div className="relative z-10 max-w-[1200px] mx-auto mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Card 1 */}
@@ -244,7 +238,7 @@ export default function Skills() {
           </div>
 
           <h3 className="text-4xl font-black text-blue-400 mb-3">
-            18+
+            25+
           </h3>
 
           <p className="text-gray-300 text-lg">
