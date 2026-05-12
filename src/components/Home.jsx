@@ -15,11 +15,9 @@ import { FaTelegramPlane } from "react-icons/fa";
 import profile from "../assets/my/my3.jpeg";
 
 export default function Home() {
-
   const typingRef = useRef(null);
 
   useEffect(() => {
-
     const typed = new Typed(typingRef.current, {
       strings: [
         "Frontend Developer",
@@ -35,16 +33,13 @@ export default function Home() {
     });
 
     return () => typed.destroy();
-
   }, []);
 
   return (
-
     <section
       id="home"
       className="relative min-h-screen overflow-hidden bg-[#020617] text-white flex items-center"
     >
-
       {/* Background Effects */}
       <div className="absolute top-[-120px] left-[-120px] w-[350px] h-[350px] bg-cyan-500/20 rounded-full blur-[120px]"></div>
 
@@ -58,54 +53,44 @@ export default function Home() {
 
         {/* LEFT CONTENT */}
         <div>
+          {/* Badge */}
+          <div className="mt-10 mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 backdrop-blur-xl shadow-lg shadow-cyan-500/10 animate-pulse">
 
-{/* Badge */}
-<div className="mt-10 mb-8">
+              <FaCode className="text-lg shrink-0" />
 
-  <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 backdrop-blur-xl shadow-lg shadow-cyan-500/10 animate-pulse">
+              <span className="text-sm md:text-base font-semibold tracking-wide whitespace-nowrap">
+                Full Stack Developer
+              </span>
 
-    <FaCode className="text-lg shrink-0" />
+            </div>
+          </div>
 
-    <span className="text-sm md:text-base font-semibold tracking-wide whitespace-nowrap">
-      Full Stack Developer
-    </span>
-
-  </div>
-
-</div>
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl font-black leading-tight">
-
             Hi, I'm
 
             <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-
               Priyanshu Kumar
-
             </span>
-
           </h1>
 
           {/* Typing */}
           <h2 className="mt-8 text-2xl md:text-4xl font-semibold text-gray-300">
-
             I Build
 
             <span
               ref={typingRef}
               className="ml-3 text-cyan-400"
             ></span>
-
           </h2>
 
           {/* Description */}
           <p className="mt-8 text-gray-400 text-lg leading-9 max-w-[650px]">
-
             Passionate MERN Stack Developer focused on building
             modern, responsive, and high-performance web applications.
             I love creating clean UI designs, smooth user experiences,
             and scalable full-stack solutions.
-
           </p>
 
           {/* Buttons */}
@@ -115,20 +100,16 @@ export default function Home() {
               href="#about"
               className="group px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-lg flex items-center gap-3 hover:scale-105 transition duration-300 shadow-xl shadow-cyan-500/20"
             >
-
               About Me
 
               <FaArrowDown className="group-hover:translate-y-1 transition duration-300" />
-
             </a>
 
             <a
               href="#contact"
               className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white font-semibold text-lg hover:bg-white/10 transition duration-300"
             >
-
               Hire Me
-
             </a>
 
           </div>
@@ -205,13 +186,9 @@ export default function Home() {
                   rel="noreferrer"
                   className={`group w-14 h-14 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-xl text-white hover:scale-110 transition-all duration-300 ${social.hover}`}
                 >
-
                   <span className="group-hover:rotate-12 transition duration-300">
-
                     {social.icon}
-
                   </span>
-
                 </a>
 
               ))}
@@ -235,14 +212,19 @@ export default function Home() {
           <div className="absolute w-[250px] md:w-[350px] h-[250px] md:h-[350px] bg-cyan-500/20 blur-[100px] rounded-full"></div>
 
           {/* Image Wrapper */}
-          <div className="relative z-10">
+          <div className="relative z-10 group">
 
-            <img
-              src={profile}
-              alt="profile"
-              draggable="false"
-              className="w-[280px] md:w-[420px] h-[280px] md:h-[420px] object-cover rounded-[35px] border border-white/10 shadow-2xl shadow-cyan-500/20 hover:scale-105 transition duration-500"
-            />
+            {/* Gradient Border */}
+            <div className="p-[5px] rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 shadow-[0_0_60px_rgba(34,211,238,0.4)]">
+
+              <img
+                src={profile}
+                alt="profile"
+                draggable="false"
+                className="w-[280px] md:w-[420px] h-[280px] md:h-[420px] object-cover rounded-full border-[6px] border-[#020617] shadow-2xl group-hover:scale-105 transition duration-500"
+              />
+
+            </div>
 
           </div>
 
@@ -251,6 +233,5 @@ export default function Home() {
       </div>
 
     </section>
-
   );
 }
