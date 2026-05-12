@@ -1,22 +1,168 @@
+import {
+  FaBriefcase,
+  FaCalendarAlt,
+  FaArrowRight,
+} from "react-icons/fa";
+
 export default function Experience() {
+
+  const experiences = [
+    {
+      company: "Self Employed",
+      role: "Freelancer",
+      duration: "Oct 2023 - Present",
+      side: "left",
+    },
+
+    {
+      company: "ICT Academy & IBM",
+      role: "Cyber Security Internship",
+      duration: "November 2025 - November 2025 (120 Hours)",
+      side: "right",
+    },
+
+    {
+      company: "Top-Trove",
+      role: "Management Information System Internship",
+      duration: "January 2025 - April 2025",
+      side: "left",
+    },
+
+    {
+      company: "CodeAlpha",
+      role: "C Language Developer Internship",
+      duration: "September 2024 - October 2024",
+      side: "right",
+    },
+
+    {
+      company: "CodeAlpha",
+      role: "Frontend Development Internship",
+      duration: "October 2024 - November 2024",
+      side: "left",
+    },
+
+    {
+      company: "Younity",
+      role: "Maintaining Records Internship",
+      duration: "October 2024 - January 2025",
+      side: "right",
+    },
+  ];
+
   return (
     <section
       id="experience"
-      className="p-20 bg-gray-100"
+      className="relative py-24 px-6 md:px-16 lg:px-24 bg-[#020617] text-white overflow-hidden"
     >
 
-      <h1 className="text-4xl font-bold mb-10">
-        Work Experience
-      </h1>
+      {/* Background Glow */}
+      <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
 
-      <div className="bg-white p-5 shadow rounded">
-        <h2 className="text-2xl font-bold">
-          Frontend Developer
-        </h2>
+      <div className="absolute bottom-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
-        <p>Company Name</p>
+      {/* Grid */}
+      <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]"></div>
 
-        <p>2024 - Present</p>
+      {/* Heading */}
+      <div className="relative z-10 text-center mb-20">
+
+        <h1 className="text-4xl md:text-6xl font-black flex items-center justify-center gap-4">
+
+          <FaBriefcase className="text-cyan-400" />
+
+          Experience
+
+        </h1>
+
+        <p className="text-gray-400 mt-5 text-lg max-w-2xl mx-auto">
+          My professional journey, internships, freelance work,
+          and hands-on industry experience.
+        </p>
+
+      </div>
+
+      {/* Timeline */}
+      <div className="relative z-10 max-w-6xl mx-auto">
+
+        {/* Center Line */}
+        <div className="hidden md:block absolute left-1/2 top-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-600 transform -translate-x-1/2 rounded-full"></div>
+
+        <div className="flex flex-col gap-14">
+
+          {experiences.map((exp, index) => (
+
+            <div
+              key={index}
+              className={`relative flex items-center ${
+                exp.side === "left"
+                  ? "md:justify-start"
+                  : "md:justify-end"
+              } justify-center`}
+            >
+
+              {/* Dot */}
+              <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 border-4 border-[#020617] shadow-lg shadow-cyan-500/50 z-20 animate-pulse"></div>
+
+              {/* Card */}
+              <div
+                className={`group relative w-full md:w-[45%] p-8 rounded-[30px] bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-3 transition-all duration-500 overflow-hidden`}
+              >
+
+                {/* Hover Glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition duration-500"></div>
+
+                {/* Company */}
+                <div className="relative z-10 mb-5">
+
+                  <div className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 font-semibold text-sm mb-5">
+                    {exp.company}
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl font-black group-hover:text-cyan-400 transition duration-300">
+
+                    {exp.role}
+
+                  </h2>
+
+                </div>
+
+                {/* Duration */}
+                <div className="relative z-10 flex items-center gap-3 text-gray-300 text-lg">
+
+                  <FaCalendarAlt className="text-blue-400" />
+
+                  {exp.duration}
+
+                </div>
+
+                {/* Border Animation */}
+                <div className="absolute inset-0 rounded-[30px] border border-cyan-400/0 group-hover:border-cyan-400/30 transition duration-500"></div>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* Button */}
+      <div className="relative z-10 flex justify-center mt-20">
+
+        <a
+          href="#contact"
+          className="group inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl shadow-cyan-500/20"
+        >
+
+          View More Experience
+
+          <FaArrowRight className="group-hover:translate-x-1 transition duration-300" />
+
+        </a>
+
       </div>
 
     </section>
