@@ -181,57 +181,69 @@ export default function Home() {
 
         </div>
 
-        {/* RIGHT IMAGE */}
-<div className="relative flex justify-center items-center w-full min-h-[600px]">
+    {/* RIGHT IMAGE */}
+<div className="relative flex justify-center items-center w-full min-h-[700px]">
 
-  {/* Outer Animated Ring */}
-  <div className="absolute w-[340px] md:w-[460px] h-[340px] md:h-[460px] rounded-full border border-cyan-500/20 animate-spin-slow"></div>
+  {/* Animated Ring */}
+  <div className="absolute w-[340px] md:w-[500px] h-[340px] md:h-[500px] rounded-full border border-cyan-500/20 animate-spin-slow"></div>
 
   {/* Pulse Ring */}
-  <div className="absolute w-[380px] md:w-[520px] h-[380px] md:h-[520px] rounded-full border border-blue-500/10 animate-pulse"></div>
+  <div className="absolute w-[390px] md:w-[560px] h-[390px] md:h-[560px] rounded-full border border-blue-500/10 animate-pulse"></div>
 
   {/* Glow */}
-  <div className="absolute w-[250px] md:w-[350px] h-[250px] md:h-[350px] bg-cyan-500/20 blur-[100px] rounded-full"></div>
+  <div className="absolute w-[280px] md:w-[380px] h-[280px] md:h-[380px] bg-cyan-500/20 blur-[100px] rounded-full"></div>
 
-  {/* Image Wrapper */}
-  <div className="relative z-10">
+  {/* IMAGE CONTAINER */}
+  <div className="relative z-10 flex flex-col items-center">
 
-    <img
-      src={profile}
-      alt="profile"
-      draggable="false"
-      className="w-[280px] md:w-[420px] h-[280px] md:h-[420px] object-cover rounded-[35px] border border-white/10 shadow-2xl shadow-cyan-500/20 hover:scale-105 transition duration-500"
-    />
+    {/* Custom Shape Image */}
+    <div className="relative group">
 
-    {/* Floating Experience Card */}
-    <div className="absolute -bottom-5 -left-5 md:-left-10 bg-white/10 border border-white/10 backdrop-blur-xl px-5 py-4 rounded-2xl shadow-2xl z-20 animate-bounce">
+      <div className="absolute inset-0 rounded-[40%_60%_65%_35%/40%_35%_65%_60%] bg-gradient-to-r from-cyan-500 to-blue-600 blur-2xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
 
-      <h3 className="text-2xl md:text-3xl font-black text-cyan-400">
-        2+
-      </h3>
-
-      <p className="text-sm text-gray-300 mt-1 whitespace-nowrap">
-        Years Experience
-      </p>
+      <img
+        src={profile}
+        alt="profile"
+        draggable="false"
+        className="relative z-10 w-[290px] md:w-[430px] h-[350px] md:h-[520px] object-cover border border-white/10 shadow-2xl shadow-cyan-500/20 transition duration-500 hover:scale-105 rounded-[40%_60%_65%_35%/40%_35%_65%_60%]"
+      />
 
     </div>
 
-    {/* Floating Project Card */}
-    <div className="absolute -top-5 -right-5 md:-right-10 bg-[#0f172a]/90 border border-cyan-500/20 backdrop-blur-xl px-5 py-4 rounded-2xl shadow-2xl z-20">
+    {/* Floating Cards Bottom */}
+    <div className="flex gap-5 mt-8 flex-wrap justify-center">
 
-      <h3 className="text-2xl md:text-3xl font-black text-purple-400">
-        15+
-      </h3>
+      {/* Experience Card */}
+      <div className="group px-6 py-5 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-2 transition duration-300 min-w-[180px]">
 
-      <p className="text-sm text-gray-300 mt-1 whitespace-nowrap">
-        Projects Done
-      </p>
+        <h3 className="text-3xl font-black text-cyan-400">
+          2+
+        </h3>
+
+        <p className="text-gray-300 mt-2 text-sm tracking-wide">
+          Years Experience
+        </p>
+
+      </div>
+
+      {/* Projects Card */}
+      <div className="group px-6 py-5 rounded-3xl bg-white/10 border border-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-2 transition duration-300 min-w-[180px]">
+
+        <h3 className="text-3xl font-black text-purple-400">
+          15+
+        </h3>
+
+        <p className="text-gray-300 mt-2 text-sm tracking-wide">
+          Projects Completed
+        </p>
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
+</div>   
       </div>
 
     </section>
