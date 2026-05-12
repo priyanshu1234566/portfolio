@@ -20,18 +20,16 @@ export default function Navbar() {
 
     const handleScroll = () => {
 
-      // Blur effect
+      // Blur Effect
       setScrolled(window.scrollY > 30);
 
-      // Hide / Show Navbar
+      // Navbar Hide / Show
       if (window.scrollY > lastScrollY) {
 
-        // Scrolling Down
         setShowNavbar(false);
 
       } else {
 
-        // Scrolling Up
         setShowNavbar(true);
 
       }
@@ -73,20 +71,20 @@ export default function Navbar() {
 
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
 
-          {/* LOGO */}
+          {/* ================= LOGO ================= */}
           <a
             href="/"
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-3 z-[1001]"
           >
 
-            {/* Icon */}
+            {/* ICON */}
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:rotate-12 transition duration-500">
 
               <FaUserAstronaut className="text-white text-2xl" />
 
             </div>
 
-            {/* Text */}
+            {/* TEXT */}
             <div>
 
               <h1 className="text-2xl md:text-3xl font-black text-white tracking-wide">
@@ -124,7 +122,7 @@ export default function Navbar() {
           {/* ================= MOBILE BUTTON ================= */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden relative w-14 h-14 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-lg flex items-center justify-center text-white text-2xl hover:bg-cyan-500/20 transition duration-300"
+            className="lg:hidden relative z-[1001] w-14 h-14 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-lg flex items-center justify-center text-white text-2xl hover:bg-cyan-500/20 transition duration-300"
           >
 
             <span
@@ -143,14 +141,16 @@ export default function Navbar() {
 
       {/* ================= MOBILE MENU ================= */}
       <div
-        className={`lg:hidden fixed top-0 z-[999] ${
-          menuOpen ? "right-0" : "-right-full"
-        } w-[80%] sm:w-[60%] h-screen bg-[#020617]/95 backdrop-blur-2xl border-l border-white/10 transition-all duration-500 shadow-2xl`}
+        className={`lg:hidden fixed top-[90px] z-[999] ${
+          menuOpen
+            ? "right-4 opacity-100"
+            : "-right-full opacity-0"
+        } w-[85%] sm:w-[60%] md:w-[45%] h-auto rounded-[30px]
+        bg-[#020617]/95 backdrop-blur-2xl border border-white/10
+        transition-all duration-500 shadow-2xl`}
       >
 
-        
-
-        {/* Links */}
+        {/* LINKS */}
         <nav className="flex flex-col gap-4 p-6">
 
           {navLinks.map((item, index) => (
@@ -172,7 +172,7 @@ export default function Navbar() {
                 {item}
               </span>
 
-              {/* Hover Glow */}
+              {/* HOVER GLOW */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
             </a>
@@ -180,10 +180,18 @@ export default function Navbar() {
 
         </nav>
 
-        {/* Bottom Glow */}
+        {/* BOTTOM GLOW */}
         <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[250px] h-[250px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
 
       </div>
+
+      {/* ================= OVERLAY ================= */}
+      {menuOpen && (
+        <div
+          onClick={() => setMenuOpen(false)}
+          className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[998]"
+        ></div>
+      )}
     </>
   );
 }
