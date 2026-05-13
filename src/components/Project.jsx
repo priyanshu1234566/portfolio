@@ -22,10 +22,10 @@ export default function Work() {
   /* ================= CATEGORIES ================= */
   const categories = [
     "all",
-    "html",
+    "html&css",
     "javascript",
     "react",
-    "fullstack",
+    "react+vite",
     "freelance",
   ];
 
