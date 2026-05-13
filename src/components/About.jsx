@@ -165,7 +165,7 @@ export default function About() {
                   <h3 className="font-bold text-xl">
                     Contact
                   </h3>
-
+                  
                   <p className="text-gray-400 text-sm">
                     Personal Info
                   </p>
@@ -204,7 +204,7 @@ export default function About() {
                 <div>
 
                   <h3 className="font-bold text-xl">
-                    Address
+                    E-mail
                   </h3>
 
                   <p className="text-gray-400 text-sm">
@@ -216,6 +216,9 @@ export default function About() {
               </div>
 
               <p className="text-gray-300 break-all mb-3">
+                <span className="font-semibold text-white">
+                  mail:
+                </span>{" "}
                 priyanshukumar2004panipat@gmail.com
               </p>
 
