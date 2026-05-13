@@ -6,9 +6,10 @@ import { useState } from "react";
 import cert1 from "../assets/certi/15.pdf";
 import cert2 from "../assets/certi/16.pdf";
 import cert3 from "../assets/certi/1.jpg";
-import cert4 from "../assets/certi/10.pdf";
+import cert4 from "../assets/certi/2.jpg";
 import cert5 from "../assets/certi/5.pdf";
 import cert6 from "../assets/certi/11.pdf";
+import cert7 from "../assets/certi/10.pdf";
 
 /* ================= ICONS ================= */
 
@@ -56,7 +57,7 @@ export default function Experience() {
 
     {
       company: "CodeAlpha",
-      role: "C Language Developer Internship",
+      role: "C++ Language Developer Internship",
       duration: "September 2024 - October 2024",
       side: "right",
     },
@@ -80,39 +81,44 @@ export default function Experience() {
 
   const certificates = [
     {
-      title: "Frontend Development Certificate",
-      company: "CodeAlpha",
+      title: "cyber security Certificate",
+      company: "Ict Academy & IBM",
       link: cert1,
     },
     {
-      title: "Full Stack workshop Certificate",
-      company: "Wayspire",
+      title: "Cyber Security Certificate",
+      company: "IBM",
       link: cert2,
     },
 
     {
-      title: "Swarambh",
-      company: "medha Career center",
+      title: "FRontend Development Certificate",
+      company: "CodeAlpha",
       link: cert3,
     },
 
     {
-      title: "Industrial Visits Certificate",
-      company: "Network Bulls",
+      title: "C++ Development Certificate",
+      company: "CodeAlpha",
       link: cert4,
     },
 
     {
-      title: "Maintaining Records Certificate",
-      company: "Younity",
+      title: "Swarambh",
+      company: "Medha Career center",
       link: cert5,
     },
 
     {
-      title: "Freelancing Work Certificate",
-      company: "Self Employed",
+      title: "Full Stack Development workshop",
+      company: "Wayspire",
       link: cert6,
     },
+    {
+      title: "Industrial visit",
+      company: "Network Bulls",
+      link: cert7,
+    }
   ];
 
   /* ================= SHOW FIRST 4 ================= */
