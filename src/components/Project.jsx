@@ -8,7 +8,6 @@ import project5 from "../assets/projects/5.png";
 import {
   FaExternalLinkAlt,
   FaGithub,
-  FaCode,
   FaReact,
   FaNodeJs,
   FaHtml5,
@@ -20,9 +19,8 @@ import { FaAndroid } from "react-icons/fa6";
 
 export default function Work() {
 
+  /* ================= STATES ================= */
   const [activeCategory, setActiveCategory] = useState("all");
-
-  // SHOW MORE STATE
   const [showAll, setShowAll] = useState(false);
 
   /* ================= CATEGORIES ================= */
@@ -41,11 +39,11 @@ export default function Work() {
     {
       name: "Birthday Website",
       desc:
-        "Modern birthday celebration website with glowing effects, animations, photo gallery, music, and interactive surprise sections using HTML and CSS.",
+        "Modern birthday celebration website with glowing effects, animations, music, and interactive surprise sections using HTML and CSS.",
       image: project1,
       category: "html&css",
       view: "https://birthday-1-2026.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
@@ -55,75 +53,75 @@ export default function Work() {
       image: project5,
       category: "javascript",
       view: "https://impress-crush-lo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
       name: "Portfolio Website",
       desc:
-        "Modern responsive portfolio website built using ReactJS and TailwindCSS with animations.",
+        "Modern responsive portfolio website built using ReactJS and TailwindCSS.",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
       category: "react",
       view: "https://portfolio-demo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
       name: "React Dashboard",
       desc:
-        "Admin dashboard built using ReactJS with charts, analytics cards, and responsive UI.",
+        "Admin dashboard built using ReactJS with analytics cards and charts.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
       category: "react+vite",
       view: "https://dashboard-demo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
       name: "E-Commerce Website",
       desc:
-        "Responsive online shopping website with product cards, cart page, and payment UI.",
+        "Responsive online shopping website with cart and payment UI.",
       image:
         "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
       category: "freelance",
       view: "https://shop-demo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
       name: "Weather App",
       desc:
-        "Live weather forecast application using API integration with modern glassmorphism design.",
+        "Live weather forecast application with modern UI and API integration.",
       image:
         "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1200&auto=format&fit=crop",
       category: "javascript",
       view: "https://weather-demo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
-    // EXTRA PROJECTS
+    /* ================= EXTRA PROJECTS ================= */
 
     {
       name: "Movie App",
       desc:
-        "Movie search application with trending movies and responsive card layout.",
+        "Movie search application with trending movies and responsive cards.",
       image:
         "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop",
       category: "react",
       view: "https://movie-demo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
       name: "Food Website",
       desc:
-        "Restaurant landing page with smooth scrolling and modern UI animations.",
+        "Restaurant landing page with smooth scrolling and modern UI design.",
       image:
         "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
       category: "html&css",
       view: "https://food-demo.netlify.app/",
-      code: "#",
+      code: "https://github.com/",
     },
 
     {
@@ -139,7 +137,7 @@ export default function Work() {
 
   ];
 
-  /* ================= FILTER ================= */
+  /* ================= FILTER PROJECTS ================= */
   const filteredProjects =
     activeCategory === "all"
       ? projects
@@ -147,12 +145,12 @@ export default function Work() {
           (project) => project.category === activeCategory
         );
 
-  // SHOW ONLY FIRST 6
+  /* ================= SHOW ONLY 6 ================= */
   const displayedProjects = showAll
     ? filteredProjects
     : filteredProjects.slice(0, 6);
 
-  /* ================= ICONS ================= */
+  /* ================= CATEGORY ICON ================= */
   const getCategoryIcon = (category) => {
 
     switch (category) {
@@ -180,8 +178,13 @@ export default function Work() {
       className="relative py-24 px-6 md:px-16 lg:px-24 bg-[#020617] text-white overflow-hidden"
     >
 
+      {/* ================= BACKGROUND ================= */}
+      <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
+
+      <div className="absolute bottom-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+
       {/* ================= HEADING ================= */}
-      <div className="text-center mb-16">
+      <div className="relative z-10 text-center mb-16">
 
         <h1 className="text-4xl md:text-6xl font-black">
 
@@ -204,7 +207,7 @@ export default function Work() {
       </div>
 
       {/* ================= FILTER BUTTONS ================= */}
-      <div className="flex flex-wrap justify-center gap-5 mb-16">
+      <div className="relative z-10 flex flex-wrap justify-center gap-5 mb-16">
 
         {categories.map((category, index) => (
 
@@ -230,7 +233,7 @@ export default function Work() {
       </div>
 
       {/* ================= PROJECT GRID ================= */}
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+      <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
 
         {displayedProjects.map((project, index) => (
 
@@ -249,10 +252,10 @@ export default function Work() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-black/40 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-black/40 to-transparent"></div>
 
-              {/* Category */}
-              <div className="absolute top-5 left-5 px-4 py-2 rounded-full bg-black/50 border border-white/10 flex items-center gap-2 text-sm font-semibold text-cyan-300 z-10">
+              {/* Category Badge */}
+              <div className="absolute top-5 left-5 px-4 py-2 rounded-full bg-black/50 border border-white/10 flex items-center gap-2 text-sm font-semibold text-cyan-300">
 
                 {getCategoryIcon(project.category)}
 
@@ -263,7 +266,7 @@ export default function Work() {
             </div>
 
             {/* ================= CONTENT ================= */}
-            <div className="p-7 relative z-20">
+            <div className="p-7">
 
               <h2 className="text-2xl font-bold mb-4 group-hover:text-cyan-400 transition duration-300">
 

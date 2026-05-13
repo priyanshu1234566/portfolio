@@ -1,11 +1,18 @@
+import { useState } from "react";
+
 import {
   FaBriefcase,
   FaCalendarAlt,
-  FaArrowRight,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 
 export default function Experience() {
 
+  // ================= SHOW MORE STATE =================
+  const [showAll, setShowAll] = useState(false);
+
+  // ================= EXPERIENCE DATA =================
   const experiences = [
     {
       company: "Self Employed",
@@ -50,21 +57,29 @@ export default function Experience() {
     },
   ];
 
+  // ================= SHOW FIRST 4 =================
+  const displayedExperiences = showAll
+    ? experiences
+    : experiences.slice(0, 4);
+
   return (
     <section
       id="experience"
       className="relative py-24 px-6 md:px-16 lg:px-24 bg-[#020617] text-white overflow-hidden"
     >
 
-      {/* Background Glow */}
+      {/* ================= BACKGROUND EFFECTS ================= */}
+
+      {/* Glow Top */}
       <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
 
+      {/* Glow Bottom */}
       <div className="absolute bottom-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
       {/* Grid */}
       <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]"></div>
 
-      {/* Heading */}
+      {/* ================= HEADING ================= */}
       <div className="relative z-10 text-center mb-20">
 
         <h1 className="text-4xl md:text-6xl font-black flex items-center justify-center gap-4">
@@ -75,14 +90,16 @@ export default function Experience() {
 
         </h1>
 
-        <p className="text-gray-400 mt-5 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-400 mt-5 text-lg max-w-2xl mx-auto leading-8">
+
           My professional journey, internships, freelance work,
           and hands-on industry experience.
+
         </p>
 
       </div>
 
-      {/* Timeline */}
+      {/* ================= TIMELINE ================= */}
       <div className="relative z-10 max-w-6xl mx-auto">
 
         {/* Center Line */}
@@ -90,7 +107,7 @@ export default function Experience() {
 
         <div className="flex flex-col gap-14">
 
-          {experiences.map((exp, index) => (
+          {displayedExperiences.map((exp, index) => (
 
             <div
               key={index}
@@ -101,13 +118,11 @@ export default function Experience() {
               } justify-center`}
             >
 
-              {/* Dot */}
+              {/* Timeline Dot */}
               <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 border-4 border-[#020617] shadow-lg shadow-cyan-500/50 z-20 animate-pulse"></div>
 
-              {/* Card */}
-              <div
-                className={`group relative w-full md:w-[45%] p-8 rounded-[30px] bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-3 transition-all duration-500 overflow-hidden`}
-              >
+              {/* Experience Card */}
+              <div className="group relative w-full md:w-[45%] p-8 rounded-[30px] bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-3 transition-all duration-500 overflow-hidden">
 
                 {/* Hover Glow */}
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition duration-500"></div>
@@ -116,9 +131,12 @@ export default function Experience() {
                 <div className="relative z-10 mb-5">
 
                   <div className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 font-semibold text-sm mb-5">
+
                     {exp.company}
+
                   </div>
 
+                  {/* Role */}
                   <h2 className="text-2xl md:text-3xl font-black group-hover:text-cyan-400 transition duration-300">
 
                     {exp.role}
@@ -136,7 +154,7 @@ export default function Experience() {
 
                 </div>
 
-                {/* Border Animation */}
+                {/* Hover Border */}
                 <div className="absolute inset-0 rounded-[30px] border border-cyan-400/0 group-hover:border-cyan-400/30 transition duration-500"></div>
 
               </div>
@@ -149,21 +167,33 @@ export default function Experience() {
 
       </div>
 
-      {/* Button */}
-      <div className="relative z-10 flex justify-center mt-20">
+      {/* ================= MORE BUTTON ================= */}
+      {experiences.length > 4 && (
 
-        <a
-          href="#contact"
-          className="group inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl shadow-cyan-500/20"
-        >
+        <div className="relative z-10 flex justify-center mt-20">
 
-          View More Experience
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl shadow-cyan-500/20"
+          >
 
-          <FaArrowRight className="group-hover:translate-x-1 transition duration-300" />
+            {showAll ? (
+              <>
+                <FaChevronUp />
+                Show Less
+              </>
+            ) : (
+              <>
+                <FaChevronDown />
+                More Experience
+              </>
+            )}
 
-        </a>
+          </button>
 
-      </div>
+        </div>
+
+      )}
 
     </section>
   );
