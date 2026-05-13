@@ -22,7 +22,7 @@ export default function Education() {
     },
     {
       title: "Senior Secondary Education",
-      school: "Shri L.G. Haria Multipurpose School | CBSE",
+      school: "Government Senior Secondary School | HBSE",
       year: "2021 - 2022 | Completed",
       icon: <FaSchool />,
       image: school12Img,
@@ -30,7 +30,7 @@ export default function Education() {
     },
     {
       title: "Secondary Education",
-      school: "Shri L.G. Haria Multipurpose School | CBSE",
+      school: "Gian Ganga Senior Secondary School | HBSE",
       year: "2019 - 2020 | Completed",
       icon: <FaBookOpen />,
       image: school10Img,

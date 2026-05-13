@@ -80,26 +80,20 @@ export default function Experience() {
 
   const certificates = [
     {
-      title: "Cyber Security Certificate",
-      company: "IBM & ICT Academy",
+      title: "Frontend Development Certificate",
+      company: "CodeAlpha",
       link: cert1,
     },
 
     {
-      title: "Frontend Development Certificate",
-      company: "CodeAlpha",
-      link: cert2,
-    },
-
-    {
-      title: "C Language Development Certificate",
-      company: "CodeAlpha",
+      title: "Swarambh",
+      company: "medha Career center",
       link: cert3,
     },
 
     {
-      title: "MIS Internship Certificate",
-      company: "Top-Trove",
+      title: "Industrial Visits Certificate",
+      company: "Network Bulls",
       link: cert4,
     },
 
