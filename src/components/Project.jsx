@@ -163,7 +163,7 @@ export default function Work() {
       view: "https://no-internet-game1.vercel.app/",
       code: "#",
     },
-
+/*
     {
       name: "Food Website",
       desc:
@@ -184,7 +184,7 @@ export default function Work() {
       category: "python",
       view: "https://github.com/",
       code: "https://github.com/",
-    },
+    },*/
   ];
 
   /* ================= FILTER PROJECTS ================= */
