@@ -2,9 +2,11 @@ import { useState } from "react";
 
 /* ================= IMPORT IMAGE ================= */
 import project1 from "../assets/projects/1.png";
-import project2 from "../assets/projects/2.png";
-import project3 from "../assets/projects/3.png";
-import project4 from "../assets/projects/4.png";
+import project2 from "../assets/projects/1.2.png";
+import project3 from "../assets/projects/2.png";
+import project4 from "../assets/projects/3.png";
+import project5 from "../assets/projects/4.png";
+import project6 from "../assets/projects/1.3.png";
 
 /* ================= IMPORT ICONS ================= */
 import {
@@ -74,6 +76,17 @@ export default function Work() {
       image: project4,
       category: "react",
       /*view: "https://portfolio-demo.netlify.app/",*/
+      view: "https://architect-eight-orcin.vercel.app/",
+ 
+      code: "#",
+    },
+     {
+      name: "Portfolio Website",
+      desc:
+        "Modern responsive portfolio website built using ReactJS and TailwindCSS.",
+      image: project5,
+      category: "react+vite",
+      /*view: "https://portfolio-demo.netlify.app/",*/
       view: "https://priyanshu-portfolio-32.vercel.app/",
  
       code: "#",
@@ -124,6 +137,17 @@ export default function Work() {
       view: "https://movie-demo.netlify.app/",
       code: "https://github.com/",
     },
+     {
+      name: "no internet game",
+      desc:
+        "Offline game for playing when there's no internet connection.",
+      image:
+        project6,
+      category: "html&css",
+      view: "https://no-internet-game1.vercel.app/",
+      code: "",
+    },
+
 
     {
       name: "Food Website",
