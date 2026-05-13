@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // PDF / IMAGE IMPORTS
 import cert1 from "../assets/certi/1.jpg";
-import cert2 from "../assets/certi/2.jpg";
+import cert2 from "../assets/certi/11.pdf";
 import cert3 from "../assets/certi/5.pdf";
 import cert4 from "../assets/certi/10.pdf";
 import cert5 from "../assets/certi/4.png";
@@ -83,6 +83,11 @@ export default function Experience() {
       title: "Frontend Development Certificate",
       company: "CodeAlpha",
       link: cert1,
+    },
+    {
+      title: "Full Stack workshop Certificate",
+      company: "Wayspire",
+      link: cert2,
     },
 
     {
