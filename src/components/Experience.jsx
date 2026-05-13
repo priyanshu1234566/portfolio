@@ -3,12 +3,12 @@ import { useState } from "react";
 /* ================= CERTIFICATE IMPORTS ================= */
 
 // PDF / IMAGE IMPORTS
-import cert1 from "../assets/certi/1.jpg";
-import cert2 from "../assets/certi/11.pdf";
-import cert3 from "../assets/certi/5.pdf";
+import cert1 from "../assets/certi/15.pdf";
+import cert2 from "../assets/certi/16.pdf";
+import cert3 from "../assets/certi/1.jpg";
 import cert4 from "../assets/certi/10.pdf";
-import cert5 from "../assets/certi/4.png";
-import cert6 from "../assets/certi/3.png";
+import cert5 from "../assets/certi/5.pdf";
+import cert6 from "../assets/certi/11.pdf";
 
 /* ================= ICONS ================= */
 
