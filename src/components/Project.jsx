@@ -24,15 +24,17 @@ import {
   FaHtml5,
   FaChevronDown,
   FaChevronUp,
+  FaPython,
 } from "react-icons/fa";
 
 import { FaAndroid } from "react-icons/fa6";
-import { FaPython } from "react-icons/fa";
 
 export default function Work() {
   /* ================= STATES ================= */
 
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] =
+    useState("all");
+
   const [showAll, setShowAll] = useState(false);
 
   /* ================= CATEGORIES ================= */
@@ -110,32 +112,30 @@ export default function Work() {
     },
 
     {
-      name: "mantram passaword manager",
+      name: "Mantram Password Manager",
       desc:
-        "Responsive online shopping website with cart and payment interface.",
-      image:
-        project8,
+        "Secure password manager application built using React, Vite and MongoDB with clean responsive UI.",
+      image: project8,
       category: "react+vite",
       view: "https://mantram-mongo-db.vercel.app/",
       code: "https://github.com/",
     },
-      {
-      name: "Karyam to-do-list manager",
+
+    {
+      name: "Karyam To-Do List Manager",
       desc:
-        "Responsive online shopping website with cart and payment interface.",
-      image:
-        project9,
+        "Modern task management application with smooth UI, responsive layout and productivity features.",
+      image: project9,
       category: "react+vite",
       view: "https://karyam-orcin.vercel.app/",
       code: "https://github.com/",
     },
 
     {
-      name: "car game",
+      name: "Car Game",
       desc:
-        "Live weather forecast application with modern UI and API integration.",
-      image:
-        project10,
+        "Interactive car racing game built using JavaScript with smooth controls and engaging gameplay.",
+      image: project10,
       category: "javascript",
       view: "https://car-46.netlify.app/",
       code: "https://github.com/",
@@ -144,11 +144,10 @@ export default function Work() {
     /* ================= EXTRA PROJECTS ================= */
 
     {
-      name: "zero-kata game",
+      name: "Zero-Kata Game",
       desc:
-        "Movie search application with trending movies and responsive cards.",
-      image:
-        project11,
+        "Fun tic-tac-toe style game developed using React with responsive UI and smooth interactions.",
+      image: project11,
       category: "react",
       view: "https://zero-kata-five.vercel.app/",
       code: "https://github.com/",
@@ -163,28 +162,6 @@ export default function Work() {
       view: "https://no-internet-game1.vercel.app/",
       code: "#",
     },
-/*
-    {
-      name: "Food Website",
-      desc:
-        "Restaurant landing page with smooth scrolling and modern UI design.",
-      image:
-        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-      category: "html&css",
-      view: "https://food-demo.netlify.app/",
-      code: "https://github.com/",
-    },
-
-    {
-      name: "Android App",
-      desc:
-        "Android application built using Java and XML with responsive layouts.",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
-      category: "python",
-      view: "https://github.com/",
-      code: "https://github.com/",
-    },*/
   ];
 
   /* ================= FILTER PROJECTS ================= */
@@ -193,7 +170,8 @@ export default function Work() {
     activeCategory === "all"
       ? projects
       : projects.filter(
-          (project) => project.category === activeCategory
+          (project) =>
+            project.category === activeCategory
         );
 
   /* ================= SHOW ONLY 6 ================= */
