@@ -1,14 +1,21 @@
 import { useState } from "react";
 
-/* ================= IMPORT IMAGE ================= */
+/* ================= IMPORT IMAGES ================= */
+
 import project1 from "../assets/projects/1.png";
 import project2 from "../assets/projects/1.2.png";
 import project3 from "../assets/projects/2.png";
 import project4 from "../assets/projects/3.png";
 import project5 from "../assets/projects/4.png";
 import project6 from "../assets/projects/1.3.png";
+import project7 from "../assets/projects/5.png";
+import project8 from "../assets/projects/4.2.png";
+import project9 from "../assets/projects/4.3.png";
+import project10 from "../assets/projects/2.1.png";
+import project11 from "../assets/projects/3.2.png";
 
 /* ================= IMPORT ICONS ================= */
+
 import {
   FaExternalLinkAlt,
   FaGithub,
@@ -20,26 +27,28 @@ import {
 } from "react-icons/fa";
 
 import { FaAndroid } from "react-icons/fa6";
+import { FaPython } from "react-icons/fa";
 
 export default function Work() {
-
   /* ================= STATES ================= */
+
   const [activeCategory, setActiveCategory] = useState("all");
   const [showAll, setShowAll] = useState(false);
 
   /* ================= CATEGORIES ================= */
+
   const categories = [
     "all",
     "html&css",
     "javascript",
     "react",
     "react+vite",
-    "freelance",
+    "python",
   ];
 
   /* ================= PROJECTS ================= */
-  const projects = [
 
+  const projects = [
     {
       name: "Birthday Website",
       desc:
@@ -49,10 +58,11 @@ export default function Work() {
       view: "https://birthday-1-2026.netlify.app/",
       code: "#",
     },
+
     {
       name: "Gallery Website",
-     desc:
-  "Creative sibling photo gallery website featuring smooth transitions, interactive layouts, memory sections, and elegant modern UI design.",
+      desc:
+        "Creative sibling photo gallery website featuring smooth transitions, interactive layouts, memory sections, and elegant modern UI design.",
       image: project2,
       category: "html&css",
       view: "https://pyaarkabandhan23-u.netlify.app/",
@@ -70,84 +80,89 @@ export default function Work() {
     },
 
     {
-      name: "Portfolio Website",
+      name: "Architect Portfolio",
       desc:
-        "Modern responsive portfolio website built using ReactJS and TailwindCSS.",
+        "Modern responsive architect portfolio website built using ReactJS and TailwindCSS.",
       image: project4,
       category: "react",
-      /*view: "https://portfolio-demo.netlify.app/",*/
       view: "https://architect-eight-orcin.vercel.app/",
- 
       code: "#",
     },
-     {
+
+    {
       name: "Portfolio Website",
       desc:
-        "Modern responsive portfolio website built using ReactJS and TailwindCSS.",
+        "Modern responsive portfolio website built using ReactJS, Vite and TailwindCSS.",
       image: project5,
       category: "react+vite",
-      /*view: "https://portfolio-demo.netlify.app/",*/
       view: "https://priyanshu-portfolio-32.vercel.app/",
- 
       code: "#",
     },
 
     {
-      name: "React Dashboard",
+      name: "Phishing Detection",
       desc:
-        "Admin dashboard built using ReactJS with analytics cards and charts.",
+        "AI-based phishing detection system developed using Python with modern dashboard UI.",
+      image: project7,
+      category: "python",
+      view: "https://phishing-3do7.onrender.com/",
+      code: "https://github.com/",
+    },
+
+    {
+      name: "mantram passaword manager",
+      desc:
+        "Responsive online shopping website with cart and payment interface.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+        project8,
       category: "react+vite",
-      view: "https://dashboard-demo.netlify.app/",
+      view: "https://mantram-mongo-db.vercel.app/",
       code: "https://github.com/",
     },
-
-    {
-      name: "E-Commerce Website",
+      {
+      name: "Karyam to-do-list manager",
       desc:
-        "Responsive online shopping website with cart and payment UI.",
+        "Responsive online shopping website with cart and payment interface.",
       image:
-        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
-      category: "freelance",
-      view: "https://shop-demo.netlify.app/",
+        project9,
+      category: "react+vite",
+      view: "https://karyam-orcin.vercel.app/",
       code: "https://github.com/",
     },
 
     {
-      name: "Weather App",
+      name: "car game",
       desc:
         "Live weather forecast application with modern UI and API integration.",
       image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1200&auto=format&fit=crop",
+        project10,
       category: "javascript",
-      view: "https://weather-demo.netlify.app/",
+      view: "https://car-46.netlify.app/",
       code: "https://github.com/",
     },
 
     /* ================= EXTRA PROJECTS ================= */
 
     {
-      name: "Movie App",
+      name: "zero-kata game",
       desc:
         "Movie search application with trending movies and responsive cards.",
       image:
-        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop",
+        project11,
       category: "react",
-      view: "https://movie-demo.netlify.app/",
+      view: "https://zero-kata-five.vercel.app/",
       code: "https://github.com/",
     },
-     {
-      name: "no internet game",
+
+    {
+      name: "No Internet Game",
       desc:
-        "Offline game for playing when there's no internet connection.",
-      image:
-        project6,
+        "Offline game for playing when there is no internet connection.",
+      image: project6,
       category: "html&css",
       view: "https://no-internet-game1.vercel.app/",
-      code: "",
+      code: "#",
     },
-
 
     {
       name: "Food Website",
@@ -166,14 +181,14 @@ export default function Work() {
         "Android application built using Java and XML with responsive layouts.",
       image:
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
-      category: "freelance",
+      category: "python",
       view: "https://github.com/",
       code: "https://github.com/",
     },
-
   ];
 
   /* ================= FILTER PROJECTS ================= */
+
   const filteredProjects =
     activeCategory === "all"
       ? projects
@@ -182,26 +197,29 @@ export default function Work() {
         );
 
   /* ================= SHOW ONLY 6 ================= */
+
   const displayedProjects = showAll
     ? filteredProjects
     : filteredProjects.slice(0, 6);
 
   /* ================= CATEGORY ICON ================= */
+
   const getCategoryIcon = (category) => {
-
     switch (category) {
-
       case "react":
         return <FaReact />;
 
       case "react+vite":
         return <FaReact />;
 
-      case "freelance":
-        return <FaNodeJs />;
+      case "python":
+        return <FaPython />;
 
       case "android":
         return <FaAndroid />;
+
+      case "javascript":
+        return <FaNodeJs />;
 
       default:
         return <FaHtml5 />;
@@ -213,40 +231,31 @@ export default function Work() {
       id="work"
       className="relative py-24 px-6 md:px-16 lg:px-24 bg-[#020617] text-white overflow-hidden"
     >
-
       {/* ================= BACKGROUND ================= */}
+
       <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
 
       <div className="absolute bottom-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
       {/* ================= HEADING ================= */}
+
       <div className="relative z-10 text-center mb-16">
-
         <h1 className="text-4xl md:text-6xl font-black">
-
           Projects{" "}
-
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-
             Made
-
           </span>
-
         </h1>
 
         <p className="text-gray-400 mt-5 text-lg max-w-2xl mx-auto">
-
           Real-world projects built using modern technologies.
-
         </p>
-
       </div>
 
       {/* ================= FILTER BUTTONS ================= */}
+
       <div className="relative z-10 flex flex-wrap justify-center gap-5 mb-16">
-
         {categories.map((category, index) => (
-
           <button
             key={index}
             onClick={() => {
@@ -259,28 +268,22 @@ export default function Work() {
                 : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/10"
             }`}
           >
-
             {category}
-
           </button>
-
         ))}
-
       </div>
 
       {/* ================= PROJECT GRID ================= */}
+
       <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-
         {displayedProjects.map((project, index) => (
-
           <div
             key={index}
             className="group relative rounded-[32px] overflow-hidden bg-white/5 border border-white/10 hover:-translate-y-3 transition-all duration-500 shadow-2xl"
           >
-
             {/* ================= IMAGE ================= */}
-            <div className="relative overflow-hidden h-[260px]">
 
+            <div className="relative overflow-hidden h-[260px]">
               <img
                 src={project.image}
                 alt={project.name}
@@ -288,85 +291,71 @@ export default function Work() {
               />
 
               {/* Overlay */}
+
               <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-black/40 to-transparent"></div>
 
               {/* Category Badge */}
-              <div className="absolute top-5 left-5 px-4 py-2 rounded-full bg-black/50 border border-white/10 flex items-center gap-2 text-sm font-semibold text-cyan-300">
 
+              <div className="absolute top-5 left-5 px-4 py-2 rounded-full bg-black/50 border border-white/10 flex items-center gap-2 text-sm font-semibold text-cyan-300">
                 {getCategoryIcon(project.category)}
 
                 {project.category}
-
               </div>
-
             </div>
 
             {/* ================= CONTENT ================= */}
+
             <div className="p-7">
-
               <h2 className="text-2xl font-bold mb-4 group-hover:text-cyan-400 transition duration-300">
-
                 {project.name}
-
               </h2>
 
               <p className="text-gray-400 leading-8 text-[15px]">
-
                 {project.desc}
-
               </p>
 
               {/* ================= BUTTONS ================= */}
-              <div className="flex gap-4 mt-8">
 
+              <div className="flex gap-4 mt-8">
                 {/* LIVE BUTTON */}
+
                 <a
                   href={project.view}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/20"
                 >
-
                   <FaExternalLinkAlt />
 
                   Live
-
                 </a>
 
                 {/* CODE BUTTON */}
+
                 <a
                   href={project.code}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 font-semibold hover:scale-105 transition duration-300"
                 >
-
                   <FaGithub />
 
                   Code
-
                 </a>
-
               </div>
-
             </div>
-
           </div>
-
         ))}
-
       </div>
 
       {/* ================= MORE BUTTON ================= */}
+
       {filteredProjects.length > 6 && (
-
         <div className="flex justify-center mt-20">
-
           <button
             onClick={() => setShowAll(!showAll)}
             className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl shadow-cyan-500/20"
           >
-
             {showAll ? (
               <>
                 <FaChevronUp />
@@ -378,13 +367,9 @@ export default function Work() {
                 More Projects
               </>
             )}
-
           </button>
-
         </div>
-
       )}
-
     </section>
   );
 }
