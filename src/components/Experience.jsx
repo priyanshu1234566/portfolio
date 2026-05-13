@@ -1,18 +1,37 @@
 import { useState } from "react";
 
+/* ================= CERTIFICATE IMPORTS ================= */
+
+// PDF / IMAGE IMPORTS
+import cert1 from "../assets/certi/1.jpg";
+import cert2 from "../assets/certi/2.jpg";
+import cert3 from "../assets/certi/5.pdf";
+import cert4 from "../assets/certi/10.pdf";
+import cert5 from "../assets/certi/4.png";
+import cert6 from "../assets/certi/3.png";
+
+/* ================= ICONS ================= */
+
 import {
   FaBriefcase,
   FaCalendarAlt,
   FaChevronDown,
   FaChevronUp,
+  FaCertificate,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 export default function Experience() {
 
-  // ================= SHOW MORE STATE =================
+  /* ================= STATES ================= */
+
   const [showAll, setShowAll] = useState(false);
 
-  // ================= EXPERIENCE DATA =================
+  const [showCertificates, setShowCertificates] =
+    useState(false);
+
+  /* ================= EXPERIENCE DATA ================= */
+
   const experiences = [
     {
       company: "Self Employed",
@@ -57,7 +76,48 @@ export default function Experience() {
     },
   ];
 
-  // ================= SHOW FIRST 4 =================
+  /* ================= CERTIFICATES ================= */
+
+  const certificates = [
+    {
+      title: "Cyber Security Certificate",
+      company: "IBM & ICT Academy",
+      link: cert1,
+    },
+
+    {
+      title: "Frontend Development Certificate",
+      company: "CodeAlpha",
+      link: cert2,
+    },
+
+    {
+      title: "C Language Development Certificate",
+      company: "CodeAlpha",
+      link: cert3,
+    },
+
+    {
+      title: "MIS Internship Certificate",
+      company: "Top-Trove",
+      link: cert4,
+    },
+
+    {
+      title: "Maintaining Records Certificate",
+      company: "Younity",
+      link: cert5,
+    },
+
+    {
+      title: "Freelancing Work Certificate",
+      company: "Self Employed",
+      link: cert6,
+    },
+  ];
+
+  /* ================= SHOW FIRST 4 ================= */
+
   const displayedExperiences = showAll
     ? experiences
     : experiences.slice(0, 4);
@@ -68,18 +128,16 @@ export default function Experience() {
       className="relative py-24 px-6 md:px-16 lg:px-24 bg-[#020617] text-white overflow-hidden"
     >
 
-      {/* ================= BACKGROUND EFFECTS ================= */}
+      {/* ================= BACKGROUND ================= */}
 
-      {/* Glow Top */}
       <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
 
-      {/* Glow Bottom */}
       <div className="absolute bottom-[-120px] right-[-120px] w-[320px] h-[320px] bg-blue-500/20 blur-[120px] rounded-full"></div>
 
-      {/* Grid */}
       <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:70px_70px]"></div>
 
       {/* ================= HEADING ================= */}
+
       <div className="relative z-10 text-center mb-20">
 
         <h1 className="text-4xl md:text-6xl font-black flex items-center justify-center gap-4">
@@ -100,9 +158,11 @@ export default function Experience() {
       </div>
 
       {/* ================= TIMELINE ================= */}
+
       <div className="relative z-10 max-w-6xl mx-auto">
 
-        {/* Center Line */}
+        {/* CENTER LINE */}
+
         <div className="hidden md:block absolute left-1/2 top-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-600 transform -translate-x-1/2 rounded-full"></div>
 
         <div className="flex flex-col gap-14">
@@ -118,16 +178,20 @@ export default function Experience() {
               } justify-center`}
             >
 
-              {/* Timeline Dot */}
+              {/* TIMELINE DOT */}
+
               <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 border-4 border-[#020617] shadow-lg shadow-cyan-500/50 z-20 animate-pulse"></div>
 
-              {/* Experience Card */}
+              {/* CARD */}
+
               <div className="group relative w-full md:w-[45%] p-8 rounded-[30px] bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-3 transition-all duration-500 overflow-hidden">
 
-                {/* Hover Glow */}
+                {/* HOVER EFFECT */}
+
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition duration-500"></div>
 
-                {/* Company */}
+                {/* CONTENT */}
+
                 <div className="relative z-10 mb-5">
 
                   <div className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 font-semibold text-sm mb-5">
@@ -136,7 +200,6 @@ export default function Experience() {
 
                   </div>
 
-                  {/* Role */}
                   <h2 className="text-2xl md:text-3xl font-black group-hover:text-cyan-400 transition duration-300">
 
                     {exp.role}
@@ -145,7 +208,8 @@ export default function Experience() {
 
                 </div>
 
-                {/* Duration */}
+                {/* DURATION */}
+
                 <div className="relative z-10 flex items-center gap-3 text-gray-300 text-lg">
 
                   <FaCalendarAlt className="text-blue-400" />
@@ -154,7 +218,8 @@ export default function Experience() {
 
                 </div>
 
-                {/* Hover Border */}
+                {/* BORDER */}
+
                 <div className="absolute inset-0 rounded-[30px] border border-cyan-400/0 group-hover:border-cyan-400/30 transition duration-500"></div>
 
               </div>
@@ -167,10 +232,13 @@ export default function Experience() {
 
       </div>
 
-      {/* ================= MORE BUTTON ================= */}
-      {experiences.length > 4 && (
+      {/* ================= BUTTONS ================= */}
 
-        <div className="relative z-10 flex justify-center mt-20">
+      <div className="relative z-10 flex flex-wrap justify-center gap-6 mt-20">
+
+        {/* MORE EXPERIENCE */}
+
+        {experiences.length > 4 && (
 
           <button
             onClick={() => setShowAll(!showAll)}
@@ -190,6 +258,87 @@ export default function Experience() {
             )}
 
           </button>
+
+        )}
+
+        {/* CERTIFICATE BUTTON */}
+
+        <button
+          onClick={() =>
+            setShowCertificates(!showCertificates)
+          }
+          className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl border border-cyan-400/30 bg-white/5 backdrop-blur-xl text-white font-bold text-lg hover:bg-cyan-500/10 hover:scale-105 transition duration-300 shadow-2xl"
+        >
+
+          <FaCertificate className="text-cyan-400" />
+
+          {showCertificates
+            ? "Hide Certificates"
+            : "View Certificates"}
+
+        </button>
+
+      </div>
+
+      {/* ================= CERTIFICATES ================= */}
+
+      {showCertificates && (
+
+        <div className="relative z-10 max-w-6xl mx-auto mt-20">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {certificates.map((certificate, index) => (
+
+              <div
+                key={index}
+                className="group p-8 rounded-[28px] bg-white/5 border border-white/10 backdrop-blur-xl hover:-translate-y-2 transition duration-500 shadow-2xl"
+              >
+
+                {/* ICON */}
+
+                <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl mb-6">
+
+                  <FaCertificate />
+
+                </div>
+
+                {/* TITLE */}
+
+                <h2 className="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition duration-300">
+
+                  {certificate.title}
+
+                </h2>
+
+                {/* COMPANY */}
+
+                <p className="text-gray-400 mb-6">
+
+                  {certificate.company}
+
+                </p>
+
+                {/* VIEW BUTTON */}
+
+                <a
+                  href={certificate.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/20"
+                >
+
+                  <FaExternalLinkAlt />
+
+                  View Certificate
+
+                </a>
+
+              </div>
+
+            ))}
+
+          </div>
 
         </div>
 
