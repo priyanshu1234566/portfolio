@@ -2,7 +2,9 @@ import { useState } from "react";
 
 /* ================= IMPORT IMAGE ================= */
 import project1 from "../assets/projects/1.png";
-import project5 from "../assets/projects/5.png";
+import project2 from "../assets/projects/2.png";
+
+import project3 from "../assets/projects/3.png";
 
 /* ================= IMPORT ICONS ================= */
 import {
@@ -43,14 +45,23 @@ export default function Work() {
       image: project1,
       category: "html&css",
       view: "https://birthday-1-2026.netlify.app/",
-      code: "https://github.com/",
+      code: "#",
+    },
+    {
+      name: "Gallery Website",
+     desc:
+  "Creative sibling photo gallery website featuring smooth transitions, interactive layouts, memory sections, and elegant modern UI design.",
+      image: project2,
+      category: "html&css",
+      view: "https://pyaarkabandhan23-u.netlify.app/",
+      code: "#",
     },
 
     {
       name: "Flower JavaScript",
       desc:
         "Beautiful flower animation using JavaScript and CSS with smooth motion and interactive petals.",
-      image: project5,
+      image: project3,
       category: "javascript",
       view: "https://impress-crush-lo.netlify.app/",
       code: "https://github.com/",
