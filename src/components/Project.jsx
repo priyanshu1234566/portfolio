@@ -3,8 +3,8 @@ import { useState } from "react";
 /* ================= IMPORT IMAGE ================= */
 import project1 from "../assets/projects/1.png";
 import project2 from "../assets/projects/2.png";
-
 import project3 from "../assets/projects/3.png";
+import project4 from "../assets/projects/4.png";
 
 /* ================= IMPORT ICONS ================= */
 import {
@@ -71,11 +71,12 @@ export default function Work() {
       name: "Portfolio Website",
       desc:
         "Modern responsive portfolio website built using ReactJS and TailwindCSS.",
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      image: project4,
       category: "react",
-      view: "https://portfolio-demo.netlify.app/",
-      code: "https://github.com/",
+      /*view: "https://portfolio-demo.netlify.app/",*/
+      view: "https://priyanshu-portfolio-32.vercel.app/",
+ 
+      code: "#",
     },
 
     {
