@@ -2,6 +2,7 @@ import { useState } from "react";
 
 /* ================= IMPORT IMAGE ================= */
 import project1 from "../assets/projects/1.png";
+import project5 from "../assets/projects/5.png";
 
 /* ================= IMPORT ICONS ================= */
 import {
@@ -11,6 +12,8 @@ import {
   FaReact,
   FaNodeJs,
   FaHtml5,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 
 import { FaAndroid } from "react-icons/fa6";
@@ -18,6 +21,9 @@ import { FaAndroid } from "react-icons/fa6";
 export default function Work() {
 
   const [activeCategory, setActiveCategory] = useState("all");
+
+  // SHOW MORE STATE
+  const [showAll, setShowAll] = useState(false);
 
   /* ================= CATEGORIES ================= */
   const categories = [
@@ -31,41 +37,106 @@ export default function Work() {
 
   /* ================= PROJECTS ================= */
   const projects = [
-    {
-      name: "Flower JavaScript",
-      desc:
-        "Beautiful flower animation using JavaScript and CSS with interactive petals and smooth motion.",
-      image: project1,
-      category: "javascript",
 
-      // WORKING LINKS
-      view: "https://impress-crush-lo.netlify.app/",
-      code: "https://github.com/jigar-sable/instagram-mern",
+    {
+      name: "Birthday Website",
+      desc:
+        "Modern birthday celebration website with glowing effects, animations, photo gallery, music, and interactive surprise sections using HTML and CSS.",
+      image: project1,
+      category: "html&css",
+      view: "https://birthday-1-2026.netlify.app/",
+      code: "#",
     },
 
     {
-      name: "Crypto Tracker",
+      name: "Flower JavaScript",
       desc:
-        "Modern cryptocurrency tracker built using ReactJS and Chakra UI.",
-      image:
-        "https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=1200&auto=format&fit=crop",
-      category: "react",
+        "Beautiful flower animation using JavaScript and CSS with smooth motion and interactive petals.",
+      image: project5,
+      category: "javascript",
+      view: "https://impress-crush-lo.netlify.app/",
+      code: "#",
+    },
 
-      view: "https://crypto-tracker-react-project.netlify.app/",
-      code: "https://github.com/jigar-sable/React-Projects",
+    {
+      name: "Portfolio Website",
+      desc:
+        "Modern responsive portfolio website built using ReactJS and TailwindCSS with animations.",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      category: "react",
+      view: "https://portfolio-demo.netlify.app/",
+      code: "#",
+    },
+
+    {
+      name: "React Dashboard",
+      desc:
+        "Admin dashboard built using ReactJS with charts, analytics cards, and responsive UI.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      category: "react+vite",
+      view: "https://dashboard-demo.netlify.app/",
+      code: "#",
+    },
+
+    {
+      name: "E-Commerce Website",
+      desc:
+        "Responsive online shopping website with product cards, cart page, and payment UI.",
+      image:
+        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
+      category: "freelance",
+      view: "https://shop-demo.netlify.app/",
+      code: "#",
+    },
+
+    {
+      name: "Weather App",
+      desc:
+        "Live weather forecast application using API integration with modern glassmorphism design.",
+      image:
+        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1200&auto=format&fit=crop",
+      category: "javascript",
+      view: "https://weather-demo.netlify.app/",
+      code: "#",
+    },
+
+    // EXTRA PROJECTS
+
+    {
+      name: "Movie App",
+      desc:
+        "Movie search application with trending movies and responsive card layout.",
+      image:
+        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop",
+      category: "react",
+      view: "https://movie-demo.netlify.app/",
+      code: "#",
+    },
+
+    {
+      name: "Food Website",
+      desc:
+        "Restaurant landing page with smooth scrolling and modern UI animations.",
+      image:
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
+      category: "html&css",
+      view: "https://food-demo.netlify.app/",
+      code: "#",
     },
 
     {
       name: "Android App",
       desc:
-        "Android application built using Java and XML.",
+        "Android application built using Java and XML with responsive layouts.",
       image:
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
-      category: "android",
-
+      category: "freelance",
       view: "https://github.com/",
       code: "https://github.com/",
     },
+
   ];
 
   /* ================= FILTER ================= */
@@ -76,6 +147,11 @@ export default function Work() {
           (project) => project.category === activeCategory
         );
 
+  // SHOW ONLY FIRST 6
+  const displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 6);
+
   /* ================= ICONS ================= */
   const getCategoryIcon = (category) => {
 
@@ -84,14 +160,14 @@ export default function Work() {
       case "react":
         return <FaReact />;
 
-      case "fullstack":
+      case "react+vite":
+        return <FaReact />;
+
+      case "freelance":
         return <FaNodeJs />;
 
       case "android":
         return <FaAndroid />;
-
-      case "php":
-        return <FaNodeJs />;
 
       default:
         return <FaHtml5 />;
@@ -134,7 +210,10 @@ export default function Work() {
 
           <button
             key={index}
-            onClick={() => setActiveCategory(category)}
+            onClick={() => {
+              setActiveCategory(category);
+              setShowAll(false);
+            }}
             className={`px-6 py-3 rounded-2xl font-semibold capitalize transition duration-300 border ${
               activeCategory === category
                 ? "bg-gradient-to-r from-cyan-500 to-blue-600 border-cyan-400 text-white"
@@ -153,7 +232,7 @@ export default function Work() {
       {/* ================= PROJECT GRID ================= */}
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
 
-        {filteredProjects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
 
           <div
             key={index}
@@ -206,7 +285,7 @@ export default function Work() {
                   href={project.view}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/20 z-50 relative"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/20"
                 >
 
                   <FaExternalLinkAlt />
@@ -220,7 +299,7 @@ export default function Work() {
                   href={project.code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 font-semibold hover:scale-105 transition duration-300 z-50 relative"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 font-semibold hover:scale-105 transition duration-300"
                 >
 
                   <FaGithub />
@@ -239,21 +318,33 @@ export default function Work() {
 
       </div>
 
-      {/* ================= HIRE BUTTON ================= */}
-      <div className="flex justify-center mt-20">
+      {/* ================= MORE BUTTON ================= */}
+      {filteredProjects.length > 6 && (
 
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:scale-105 transition duration-300"
-        >
+        <div className="flex justify-center mt-20">
 
-          <FaCode />
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl shadow-cyan-500/20"
+          >
 
-          Hire Me For Projects
+            {showAll ? (
+              <>
+                <FaChevronUp />
+                Show Less
+              </>
+            ) : (
+              <>
+                <FaChevronDown />
+                More Projects
+              </>
+            )}
 
-        </a>
+          </button>
 
-      </div>
+        </div>
+
+      )}
 
     </section>
   );
