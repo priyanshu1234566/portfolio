@@ -1,17 +1,138 @@
-# React + Vite
- visit in : https://priyanshu-portfolio-32.vercel.app/
- 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+# 🚀 Priyanshu Portfolio  
+### ✨ Modern React + Vite Developer Portfolio ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" />
+<img src="https://img.shields.io/badge/Vite-Fast-purple?style=for-the-badge&logo=vite" />
+<img src="https://img.shields.io/badge/TailwindCSS-Styling-06B6D4?style=for-the-badge&logo=tailwindcss" />
+<img src="https://img.shields.io/badge/Responsive-Design-success?style=for-the-badge" />
 
-## React Compiler
+<br/>
+<br/>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌐 **Live Demo:**  
+👉 **https://priyanshu-portfolio-32.vercel.app/**
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🌟 About The Project
+
+This is a **fully responsive**, **modern**, and **animated** developer portfolio website built using **React + Vite**.  
+It showcases projects, skills, services, contact information, social links, and interactive UI animations with a professional design.
+
+The portfolio is optimized for:
+- ⚡ Fast Performance
+- 🎨 Modern UI/UX
+- 📱 Mobile Responsive Design
+- ✨ Smooth Animations
+- 🚀 Deployment Ready
+
+---
+
+# 🖼️ Features
+
+✨ Modern Hero Section  
+✨ Animated Components  
+✨ Responsive Layout  
+✨ Smooth Scroll Effects  
+✨ Professional Project Showcase  
+✨ Social Media Integration  
+✨ Contact Section  
+✨ Clean Code Structure  
+✨ Optimized Performance  
+✨ Fast Vite Build System  
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| ⚛️ React | Frontend Library |
+| ⚡ Vite | Fast Build Tool |
+| 🎨 Tailwind CSS | Styling |
+| 💫 Framer Motion | Animations |
+| 🌐 Vercel | Deployment |
+
+---
+
+# 📂 Folder Structure
+
+```bash
+portfolio/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.css
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── vite.config.js
+
+🚀 Getting Started
+📥 Installation
+
+Clone the repository:
+
+git clone https://github.com/your-username/portfolio.git
+
+Go to the project directory:
+
+cd portfolio
+
+Install dependencies:
+
+npm install
+
+Start development server:
+
+npm run dev
+⚡ Build For Production
+npm run build
+
+Preview production build:
+
+npm run preview
+🎯 Future Improvements
+🌙 Dark/Light Theme Toggle
+🧠 AI Chat Integration
+📊 Admin Dashboard
+📨 Working Contact Backend
+🌐 Multi-language Support
+📸 Preview
+<div align="center">
+
+✨ Elegant UI
+⚡ Lightning Fast
+🎨 Professional Design
+🚀 Fully Responsive
+
+</div>
+🤝 Connect With Me
+<div align="center">
+
+💼 Portfolio:
+👉 https://priyanshu-portfolio-32.vercel.app/
+
+📧 Email: your-email@example.com
+
+🐙 GitHub:
+👉 https://github.com/your-github
+
+</div>
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub and share it with others.
+
+<div align="center">
+🚀 Made with ❤️ using React + Vite
+
+✨ Designed & Developed by Priyanshu ✨
+
+</div> ```
