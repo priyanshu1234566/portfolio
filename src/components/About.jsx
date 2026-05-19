@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 import aboutImg from "../assets/my/bio 2.jpg";
-import resume from "../assets/my/priyanshu resume.pdf";
+import resume from "../assets/my/priyanshu (3).pdf";
 
 export default function About() {
   return (
