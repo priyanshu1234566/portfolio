@@ -40,40 +40,46 @@ export default function Experience() {
       duration: "Oct 2023 - Present",
       side: "left",
     },
+    {
+     company: "Nexgen Digital",
+     role:"Mail Coordination",
+     duration:"August 2026 - Present",
+     side:"right"   
+    },
 
     {
       company: "ICT Academy & IBM",
       role: "Cyber Security Internship",
       duration: "November 2025 - November 2025 (120 Hours)",
-      side: "right",
+      side: "left",
     },
 
     {
       company: "Top-Trove",
       role: "Management Information System Internship",
       duration: "January 2025 - April 2025",
-      side: "left",
+      side: "right",
     },
 
     {
       company: "CodeAlpha",
       role: "C++ Language Developer Internship",
       duration: "September 2024 - October 2024",
-      side: "right",
+      side: "left",
     },
 
     {
       company: "CodeAlpha",
       role: "Frontend Development Internship",
       duration: "October 2024 - November 2024",
-      side: "left",
+      side: "right",
     },
 
     {
       company: "Younity",
       role: "Maintaining Records Internship",
       duration: "October 2024 - January 2025",
-      side: "right",
+      side: "left",
     },
   ];
 
