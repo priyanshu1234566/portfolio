@@ -12,7 +12,7 @@ import {
 
 import { FaTelegramPlane } from "react-icons/fa";
 
-import profile from "../assets/my/my3.jpeg";
+import profile from "../assets/my/my 2.jpeg";
 
 export default function Home() {
   const typingRef = useRef(null);
